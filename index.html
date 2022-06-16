@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="tetris js html5" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/syle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <audio id="music" src="audio/kekw.wav/,audio/lel.aiff" autoplay loop></audio>
+    <div class="title">Tetris</div>
+
+    <div id="background_tetris" class="background_tetris">
+        <div id="UI-mainMenu" class="UI-mainMenu">
+            <button onclick="gameStart();" class="btn">Play</button>
+        </div>
+
+        <div id="UI_pause" class="UI_pause">
+            <div class="title_menu">Pause</div>
+            <br clear="all">
+            <div class="btn_left">
+                <button onclick="fpause(false)" class="btn">continue</button>
+            </div>
+
+            <div class="btn_right">
+                <button onclick="closeGame()" class="btn">gameStart</button>
+            </div>
+            <br clear="all">
+        </div>
+    </div>
+    </div>
+
+    <div id="body" class="body">
+        <div class="positions right">
+            <canvas id="tetris" width="200" height="400"></canvas>
+
+        </div>
+        <div class="positions">
+            <div class="box_lateral">Next
+                <canvas id="nextPiece" width="100" height="100"></canvas>
+            </div>
+            <div class="box_lateral">
+                Points
+                <div id="score"></div>
+            </div>
+            <div class="box_lateral">
+                Lines
+                <div id="lines"></div>
+            </div>
+            <div class="box_lateral">
+                level
+                <div id="level"></div>
+            </div>
+            <div class="btn_group"><button onclick="fpause(true)" class="btn">Stop</button></div>
+        </div>
+
+    </div>
+    </div>
+    <script src="javas/tetris.js"></script>
+</body>
+
+</html>
